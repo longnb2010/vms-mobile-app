@@ -11,3 +11,12 @@ git clone https://github.com/longnb2010/vms-mobile-app.git
 - **Email:** longnb2010@gmail.com  
 - **Website:** https://thienlongtri.vn
 - **Author:** Thien Long Tri  
+
+## APP MOBILE
+
+- IOS: search "tltvms"
+- ANDROID: search "vms"
+
+## Clip
+
+https://www.youtube.com/watch?v=h7HezDl6kXk&list=PLqcOkEwp7AVfTxdmfc6w4wAQzN8V4EZZW&index=2
