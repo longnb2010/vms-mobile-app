@@ -14,8 +14,8 @@ git clone https://github.com/longnb2010/vms-mobile-app.git
 
 ## APP MOBILE
 
-- IOS: search "tltvms"
-- ANDROID: search "vms"
+- IOS: "tltvms"
+- ANDROID: "vms"
 
 ## Clip
 
