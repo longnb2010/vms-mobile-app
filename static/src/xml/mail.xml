@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-extend="UserMenu.Actions">
+        <t t-jquery="a" t-operation="replace">
+        </t>
+        <t t-jquery="div" t-operation="before">
+            <a role="menuitem" href="#" data-menu="settings" class="dropdown-item">My profile</a>
+        </t>
+        <t t-jquery="div" t-operation="after">
+            <a role="menuitem" href="#" data-menu="logout" class="dropdown-item">Đăng xuất</a>
+        </t>
+    </t>
+
+    <t t-extend="mail.systray.ActivityMenu.Previews">
+        <t t-jquery="t[t-foreach*='activities'][t-as*='activity']" t-operation="replace">
+            <t t-foreach="activities" t-as="activity">
+                <div class="o_mail_preview o_systray_activity" t-att-data-res_model="activity.model" t-att-data-model_name="activity.name" data-filter='filter_activities_create_date_this_week_and_late'>
+                    <div t-if="activity.icon" class="o_mail_preview_image o_mail_preview_app">
+                        <img t-att-src="activity.icon" alt="Activity"/>
+                    </div>
+                    <div class="o_preview_info">
+                        <div class="o_preview_title">
+                            <span class="o_preview_name">
+                                <t t-esc="activity.name"/>
+                            </span>
+                            <div t-if="activity.actions" class="o_mail_activity_action_buttons">
+                                <t t-foreach="activity.actions" t-as="action">
+                                    <button type="button"
+                                        t-att-title="action.name"
+                                        t-att-class="'o_mail_activity_action btn btn-link fa ' + action.icon"
+                                        t-att-data-action_xmlid="action.action_xmlid"
+                                        t-att-data-res_model="activity.model"
+                                        t-att-data-model_name="activity.name">
+                                    </button>
+                                </t>
+                            </div>
+                        </div>
+                        <div t-if="activity and activity.type == 'activity'">
+                            <button t-if="activity.overdue_count" type="button" class="btn btn-link o_activity_filter_button mr16" t-att-data-res_model="activity.model" t-att-data-model_name="activity.name" data-filter='overdue'><t t-esc="activity.overdue_count"/> Late </button>
+                            <span t-if="!activity.overdue_count" class="o_no_activity mr16">0 Late </span>
+                            <button t-if="activity.today_count" type="button" class="btn btn-link o_activity_filter_button mr16" t-att-data-res_model="activity.model" t-att-data-model_name="activity.name" data-filter='today'> <t t-esc="activity.today_count"/> Today </button>
+                            <span t-if="!activity.today_count" class="o_no_activity mr16">0 Today </span>
+                            <button t-if="activity.planned_count" type="button" class="btn btn-link o_activity_filter_button float-right" t-att-data-res_model="activity.model" t-att-data-model_name="activity.name" data-filter='upcoming_all'> <t t-esc="activity.planned_count"/> Future </button>
+                            <span t-if="!activity.planned_count" class="o_no_activity float-right">0 Future</span>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </t>
+</templates>
