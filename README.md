@@ -1,16 +1,13 @@
-## Mô tả
+## Description
 
-Module mở rộng Odoo CE hỗ trợ Mobile APP
+Odoo Community Extension Module Supporting Mobile APP
 
-## Cài đặt
+## Install
 
-1. Clone repo vào thư mục addons của Odoo:
-   ```bash
-   git clone https://github.com/longnb2010/vms-mobile-app.git
-   ```
+git clone https://github.com/longnb2010/vms-mobile-app.git
 
-## Liên hệ
+## Contact
 
 - **Email:** longnb2010@gmail.com  
 - **Website:** https://thienlongtri.vn
-- **Tác giả:** Thien Long Tri  
+- **Author:** Thien Long Tri  
