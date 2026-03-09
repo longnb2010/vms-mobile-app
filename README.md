@@ -1,6 +1,6 @@
 ## Description
 
-Odoo Community Module Supporting Mobile APP
+Odoo Community Module Supporting Odoo Mobile
 
 ## Install
 
